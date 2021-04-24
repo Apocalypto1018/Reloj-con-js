@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 
-<html lang="En">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="WebMaster clock with js" />
     <meta name="keywords" content="digital, clock, js" />
     <meta name="description" content="digital clock made with js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/index.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Digital Clock JS</title>
   </head>
 
   <body>
     <div class="container">
-      <header>
-        <h1>DIGITAL CLOCK</h1>
-      </header>
-
-      <section>
-        <form name="formMain" class="boxText">
-          <input
-            class="boxText"
-            type="text"
-            id="showClock"
-            name="showClock"
-            placeholder="waiting"
-            disabled
-          />
-        </form>
-
-        <div class="buttons">
-          <button id="start_Clock" class="start_Clock">Start Clock</button>
-          <button id="stop_Clock" class="stop_Clock">Stop Clock</button>
-        </div>
-      </section>
+      <div class="digitalClock">
+        <section class="display">
+          <h1 class="title">Digital clock</h1>
+          <div class="divider"></div>
+          <p id="clock" class="clock">Waiting</p>
+        </section>
+        <div class="divider"></div>
+        <section class="buttons">
+          <button id="startClock" class="button start">Start clock</button>
+          <button id="stopClock" class="button stop" disabled>
+            Stop clock
+          </button>
+        </section>
+      </div>
     </div>
 
     <!--<footer>

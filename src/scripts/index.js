@@ -1,31 +1,32 @@
-const startButton = document.getElementById("start_Clock");
-const stopButton = document.getElementById("stop_Clock");
+const clock = document.getElementById("clock");
+const startButton = document.getElementById("startClock");
+const stopButton = document.getElementById("stopClock");
 const oneSecond = 1000;
 let intervalId = null;
 
-let runClock = () => {
+const runClock = () => {
   intervalId = setInterval(() => {
-    let systemTime = new Date();
-    let hour = systemTime.getHours();
-    let minute = systemTime.getMinutes();
-    let second = systemTime.getSeconds();
+    const systemTime = new Date();
+    const hours = systemTime.getHours();
+    const minutes = systemTime.getMinutes();
+    const seconds = systemTime.getSeconds();
 
-    let showTime = `${hour} : ${minute}  : ${second}`;
+    const showTime = `${hours}:${minutes}:${seconds}`;
 
-    document.formMain.showClock.value = showTime;
+    clock.innerHTML = showTime;
 
     startButton.disabled = true;
     stopButton.disabled = false;
   }, oneSecond);
 };
 
-let stopClock = () => {
+const stopClock = () => {
   clearInterval(intervalId);
 
   startButton.disabled = false;
   stopButton.disabled = true;
 
-  document.formMain.showClock.value = "clock stopped";
+  clock.innerHTML = "Clock stopped";
 };
 
 startButton.addEventListener("click", runClock);

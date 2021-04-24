@@ -1,73 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  background-image: url("../images/background-gray.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  font-family: "Helvetica", "Arial", sans-serif;
-  color: #566b78;
+  margin: 0;
 }
 
 h1 {
-  text-align: center;
-  text-shadow: 5px 5px 1px rgb(31, 30, 30);
-  line-height: 1.5;
-  padding: 1px 1px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fdfdfd;
+  color: #263646;
 }
 
 .container {
-  background-color: rgba(43, 41, 41, 0.466);
-  color: rgb(197, 195, 195);
-  width: 50%;
-  margin: 0% auto;
-  padding: 1%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 30px;
-
-  display: flex;
-  justify-content: center;
-
-  box-shadow: 15px 10px 8px rgb(12, 12, 12);
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-.boxText {
-  background-color: white;
-  text-shadow: 3px 1px 10px rgb(61, 59, 59);
-  margin: 0% auto;
-  color: #333;
-  width: 75%;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  vertical-align: text-bottom;
-  border-radius: 15px;
-  font-size: 150%;
-  font-weight: 600;
+.digitalClock {
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px -10px rgb(0 64 128 / 20%);
+  padding: 20px 50px;
+  border-radius: 6px;
+}
+
+.display {
+  border: 1px solid #e9f2f9;
+  border-radius: 4px;
+}
+
+.title {
   text-align: center;
-  margin-bottom: 15px;
-  margin-top: 10px;
 }
 
-.buttons {
-  margin-left: 12%;
+.divider {
+  padding-bottom: 20px;
 }
 
-.start_Clock {
-  border-radius: 28px;
-  text-shadow: 1px 1px 10px black;
-}
-.start_Clock:hover {
-  background-color: rgb(197, 195, 195);
-  color: white;
+.clock {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
 }
 
-.stop_Clock {
-  border-radius: 28px;
-  text-shadow: 1px 1px 10px black;
+.button {
+  background-color: transparent;
+  border: 1px solid #e9f2f9;
+  border-radius: 4px;
+  padding: 8px 16px;
 }
 
-.stop_Clock:hover {
-  background-color: rgb(197, 195, 195);
-  color: white;
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  filter: brightness(0.9);
+}
+
+.start {
+  background-color: #00b8a9;
+}
+
+.stop {
+  background-color: #f6416c;
 }
 
 /*
